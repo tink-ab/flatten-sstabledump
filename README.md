@@ -84,11 +84,11 @@ $ cat testdata/testdata1.json | fss
 FAQ
 ---
 
-### Can't you use Apache Hive to simply process raw `sstabledump` JSON output?
+### Can't you use AWS Athena to simply process raw `sstabledump` JSON output?
 
-No. Apache Hive requires every JSON entity to be line-delimited. `sstabledump`
+No. AWS Athena requires every JSON entity to be line-delimited. `sstabledump`
 outputs its JSON in multiline JSON. Compacting using something like [`jq -c
-.`](https://stedolan.github.io/jq/) doesn't work because Apache Hive requires
+.`](https://stedolan.github.io/jq/) doesn't work because AWS Athena requires
 the JSON root object to be a JSON object, not array.
 
 Using `jq -c .[]` would work in theory. However, it reads up the entire JSON

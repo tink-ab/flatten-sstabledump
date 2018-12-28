@@ -1,0 +1,1 @@
+{"cells":[{"name":"status","value":"normal"},{"deletion_info":{"local_delete_time":"2017-01-28T12:01:00Z","marked_deleted":"2017-01-28T12:01:00.256788Z"},"name":"properties"},{"name":"properties","path":["pickable"],"value":""}],"liveness_info":{"tstamp":"2017-01-28T12:01:00.256789Z"},"partition":{"partition":{"key":["C3-BE-52-C-01"],"position":0}},"position":18,"type":"row"}

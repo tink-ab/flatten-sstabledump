@@ -18,6 +18,14 @@ Install by issuing:
 $ go get github.com/tink-ab/flatten-sstabledump
 ```
 
+Testing
+-------
+There are some basic tests using [Bats](https://github.com/sstephenson/bats). Execute them by issuing:
+
+```bash
+$ bats test.bats
+```
+
 Usage
 -----
 ```bash

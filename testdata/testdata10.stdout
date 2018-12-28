@@ -1,0 +1,2 @@
+{"end":{"deletion_info":{"local_delete_time":"2016-06-16T19:53:21Z","marked_deleted":"2016-06-16T19:53:21.133300Z"},"type":"inclusive"},"partition":{"partition":{"key":["apple"],"position":0}},"type":"range_tombstone_bound"}
+{"partition":{"partition":{"key":["apple"],"position":0}},"start":{"clustering":["20160615"],"deletion_info":{"local_delete_time":"2016-06-16T19:53:21Z","marked_deleted":"2016-06-16T19:53:21.133300Z"},"type":"exclusive"},"type":"range_tombstone_bound"}

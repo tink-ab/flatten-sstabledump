@@ -1,0 +1,1 @@
+{"cells":[{"name":"address","value":"D3-DJ-21-B-02"},{"name":"item_d","value":"3600029145"},{"name":"quantity","value":"2"},{"deletion_info":{"local_delete_time":"2017-01-27T15:09:50Z"},"name":"username"}],"liveness_info":{"tstamp":"2017-01-27T15:09:50.065224Z"},"partition":{"partition":{"key":["103"],"position":0}},"position":18,"type":"row"}

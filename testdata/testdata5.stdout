@@ -1,0 +1,1 @@
+{"cells":[{"name":"status","value":"damaged"},{"deletion_info":{"local_delete_time":"2017-01-28T11:58:59Z","marked_deleted":"2017-01-28T11:58:59.160897Z"},"name":"properties"}],"liveness_info":{"tstamp":"2017-01-28T11:58:59.160898Z"},"partition":{"partition":{"key":["D3-DJ-21-B-02"],"position":0}},"position":18,"type":"row"}

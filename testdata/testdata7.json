@@ -1,0 +1,56 @@
+[
+  {
+    "partition" : {
+      "key" : [ "apple" ],
+      "position" : 0
+    },
+    "rows" : [
+      {
+        "type" : "row",
+        "position" : 19,
+        "clustering" : [ "20160616" ],
+        "liveness_info" : { "tstamp" : "2016-06-16T18:52:41.900451Z" },
+        "cells" : [
+          { "name" : "crates", "deletion_info" : { "marked_deleted" : "2016-06-16T18:52:41.900450Z", "local_delete_time" : "2016-06-16T18:52:41Z" } },
+          { "name" : "crates", "path" : [ "1" ], "value" : "" },
+          { "name" : "crates", "path" : [ "2" ], "value" : "" },
+          { "name" : "crates", "path" : [ "3" ], "value" : "" },
+          { "name" : "crates", "path" : [ "4" ], "value" : "" },
+          { "name" : "crates", "path" : [ "5" ], "value" : "" }
+        ]
+      },
+      {
+        "type" : "row",
+        "position" : 66,
+        "clustering" : [ "20160617" ],
+        "liveness_info" : { "tstamp" : "2016-06-16T18:52:41.902093Z" },
+        "cells" : [
+          { "name" : "crates", "deletion_info" : { "marked_deleted" : "2016-06-16T18:52:41.902092Z", "local_delete_time" : "2016-06-16T18:52:41Z" } },
+          { "name" : "crates", "path" : [ "1" ], "value" : "" },
+          { "name" : "crates", "path" : [ "2" ], "value" : "" },
+          { "name" : "crates", "path" : [ "3" ], "value" : "" }
+        ]
+      }
+    ]
+  },
+  {
+    "partition" : {
+      "key" : [ "pickles" ],
+      "position" : 104
+    },
+    "rows" : [
+      {
+        "type" : "row",
+        "position" : 125,
+        "clustering" : [ "20160616" ],
+        "liveness_info" : { "tstamp" : "2016-06-16T18:52:41.903751Z", "ttl" : 2592000, "expires_at" : "2016-07-16T18:52:41Z", "expired" : false },
+        "cells" : [
+          { "name" : "crates", "deletion_info" : { "marked_deleted" : "2016-06-16T18:52:41.903750Z", "local_delete_time" : "2016-06-16T18:52:41Z" } },
+          { "name" : "crates", "path" : [ "6" ], "value" : "" },
+          { "name" : "crates", "path" : [ "7" ], "value" : "" },
+          { "name" : "crates", "path" : [ "8" ], "value" : "" }
+        ]
+      }
+    ]
+  }
+]

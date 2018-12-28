@@ -1,0 +1,18 @@
+[
+  {
+    "partition" : {
+      "key" : [ "apple" ],
+      "position" : 0
+    },
+    "rows" : [
+      {
+        "type" : "row",
+        "position" : 19,
+        "clustering" : [ "20160617" ],
+        "cells" : [
+          { "name" : "crates", "deletion_info" : { "marked_deleted" : "2016-06-16T19:10:53.267240Z", "local_delete_time" : "2016-06-16T19:10:53Z" } }
+        ]
+      }
+    ]
+  }
+]

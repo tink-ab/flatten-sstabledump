@@ -1,0 +1,25 @@
+[
+  {
+    "partition" : {
+      "key" : [ "apple" ],
+      "position" : 0
+    },
+    "rows" : [
+      {
+        "type" : "range_tombstone_bound",
+        "start" : {
+          "type" : "exclusive",
+          "clustering" : [ "20160615" ],
+          "deletion_info" : { "marked_deleted" : "2016-06-16T19:53:21.133300Z", "local_delete_time" : "2016-06-16T19:53:21Z" }
+        }
+      },
+      {
+        "type" : "range_tombstone_bound",
+        "end" : {
+          "type" : "inclusive",
+          "deletion_info" : { "marked_deleted" : "2016-06-16T19:53:21.133300Z", "local_delete_time" : "2016-06-16T19:53:21Z" }
+        }
+      }
+    ]
+  }
+]

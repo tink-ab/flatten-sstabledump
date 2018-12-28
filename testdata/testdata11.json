@@ -1,0 +1,9 @@
+[
+  {
+    "partition" : {
+      "key" : [ "pickles" ],
+      "position" : 0,
+      "deletion_info" : { "marked_deleted" : "2016-06-17T09:38:52.550841Z", "local_delete_time" : "2016-06-17T09:38:52Z" }
+    }
+  }
+]

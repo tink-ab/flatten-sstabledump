@@ -1,0 +1,20 @@
+[
+  {
+    "partition" : {
+      "key" : [ "C3-BE-52-C-01" ],
+      "position" : 0
+    },
+    "rows" : [
+      {
+        "type" : "row",
+        "position" : 18,
+        "liveness_info" : { "tstamp" : "2017-01-28T12:01:00.256789Z" },
+        "cells" : [
+          { "name" : "status", "value" : "normal" },
+          { "name" : "properties", "deletion_info" : { "marked_deleted" : "2017-01-28T12:01:00.256788Z", "local_delete_time" : "2017-01-28T12:01:00Z" } },
+          { "name" : "properties", "path" : [ "pickable" ], "value" : "" }
+        ]
+      }
+    ]
+  }
+]

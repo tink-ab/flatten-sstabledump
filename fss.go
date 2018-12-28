@@ -168,7 +168,7 @@ func process(f io.Reader, out outChan) error {
 		}
 
 		if i.WhatIsNext() != jsoniter.ArrayValue {
-			return errors.New("expected `rows` to ba an array")
+			return errors.New("expected `rows` to be an array")
 		}
 		for i.ReadArray() {
 			if i.WhatIsNext() != jsoniter.ObjectValue {

@@ -156,8 +156,43 @@ func process(f io.Reader, out outChan) error {
 			}
 			switch fieldname {
 			case "":
-				fallthrough
+				if _, exist := partition["partition"]; !exist {
+					return errors.New("expected 'partition' to have been written.")
+				}
+				if _, exist := partition["partition"].(map[string]interface{})["deletion_info"]; !exist {
+					return errors.New("no cells - expected a deletion")
+				}
+				row := make(map[string]interface{})
+				row["partition"] = partition
+				row["type"] = "partition_deletion"
+				out <- row
+				break partFields
 			case "rows":
+				if i.WhatIsNext() != jsoniter.ArrayValue {
+					return errors.New("expected `rows` to be an array")
+				}
+				for i.ReadArray() {
+					if i.WhatIsNext() != jsoniter.ObjectValue {
+						return errors.New("expected every row to be an object")
+					}
+					row := i.Read().(map[string]interface{})
+					if i.Error != nil {
+						return errors.Wrap(i.Error, "")
+					}
+					if _, exist := row["partition"]; exist {
+						return errors.New("did not expect any row to contain a `partition` key")
+					}
+					row["partition"] = partition
+					out <- row
+				}
+				if i.Error != nil {
+					return errors.Wrap(i.Error, "unable to read the row array")
+				}
+
+				// TODO: Assert object ends.
+				if fieldname := i.ReadObject(); fieldname != "" {
+					return errors.Errorf("expected `rows` field to be the last. Last field was:", fieldname)
+				}
 				break partFields
 			default:
 				partition[fieldname] = i.Read()
@@ -166,32 +201,7 @@ func process(f io.Reader, out outChan) error {
 				}
 			}
 		}
-
-		if i.WhatIsNext() != jsoniter.ArrayValue {
-			return errors.New("expected `rows` to be an array")
-		}
-		for i.ReadArray() {
-			if i.WhatIsNext() != jsoniter.ObjectValue {
-				return errors.New("expected every row to be an object")
-			}
-			row := i.Read().(map[string]interface{})
-			if i.Error != nil {
-				return errors.Wrap(i.Error, "")
-			}
-			if _, exist := row["partition"]; exist {
-				return errors.New("did not expect any row to contain a `partition` key")
-			}
-			row["partition"] = partition
-			out <- row
-		}
-		if i.Error != nil {
-			return errors.Wrap(i.Error, "unable to read the row array")
-		}
-
-		// TODO: Assert object ends.
-		if fieldname := i.ReadObject(); fieldname != "" {
-			return errors.Errorf("expected `rows` field to be the last. Last field was:", fieldname)
-		}
+		return i.Error
 	}
 
 	return errors.Wrap(i.Error, "end of array not found")

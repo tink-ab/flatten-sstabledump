@@ -21,7 +21,7 @@ $ go get github.com/tink-ab/flatten-sstabledump
 Usage
 -----
 ```bash
-$ cat testdata.json
+$ cat testdata/testdata1.json
 [
   {
     "partition" : {
@@ -67,7 +67,7 @@ $ cat testdata.json
     ]
   }
 ]
-$ cat testdata.json | fss
+$ cat testdata/testdata1.json | fss
 {"cells":[{"name":"accountid","value":"ee312163-75bf-4df5-94de-f34146efa502"}],"clustering":["203b5189-d9e1-4db7-b00c-c1b759790b8f"],"liveness_info":{"tstamp":"2018-06-18T11:20:49.363Z"},"partition":{"partition":{"key":["d7f50415-3c9e-4a84-bdf2-54cbcbb0df0b","201806"],"position":0}},"position":408,"type":"row"}
 {"cells":[{"name":"accountid","value":"457f21b5-69c0-48bc-bffa-037d88c8ecf8"}],"clustering":["35136e4c-ffa2-4205-82c1-7ce63d2519b9"],"liveness_info":{"tstamp":"2018-06-19T11:20:49.363Z"},"partition":{"partition":{"key":["d7f50415-3c9e-4a84-bdf2-54cbcbb0df0b","201806"],"position":0}},"position":408,"type":"row"}
 {"cells":[{"name":"accountid","value":"501cde77-cf60-468e-954f-e987e7490d4c"}],"clustering":["e1e6fbe4-4ec4-498d-b892-c00f7667bbc8"],"liveness_info":{"tstamp":"2018-08-18T11:20:49.363Z"},"partition":{"partition":{"key":["70c2ca4a-84f5-4cc2-b44a-e2f92b4888fb","201806"],"position":0}},"position":408,"type":"row"}

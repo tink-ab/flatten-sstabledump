@@ -110,9 +110,10 @@ func encode(in chan map[string]interface{}, out chan *bytes.Buffer, pool *Buffer
 		}
 
 		compbuf := pool.Get()
-		// TODO/PERF: There are likely other JSON encoders out there that can
-		// encode immediately to compact format.
 		if err := json.Compact(compbuf, fluffybuf.Bytes()); err != nil {
+			// TODO/PERF: There are likely other JSON encoders out there that
+			// can encode immediately to compact format.
+
 			log.Fatalln("could not compact JSON:", err)
 		}
 		out <- compbuf

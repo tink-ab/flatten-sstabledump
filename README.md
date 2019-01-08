@@ -102,3 +102,9 @@ Yes. :-) That's why you want to compress its output. Or, even better, convert
 it to compressed [Avro](https://avro.apache.org/),
 [ORC](https://orc.apache.org/) or [Parquet](https://parquet.apache.org/).
 
+### What is the format of these JSON objects?
+
+Have a look at these two links (which also describes tombstones):
+
+ * http://thelastpickle.com/blog/2016/07/27/about-deletes-and-tombstones.html
+ * http://www.beyondthelines.net/databases/cassandra-tombstones/

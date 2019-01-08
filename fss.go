@@ -96,6 +96,7 @@ func write(in <-chan *bytes.Buffer, pool *BufferPool) {
 		if _, err := io.Copy(out, e); err != nil {
 			log.Fatalln("could not write to stdout:", err)
 		}
+		pool.Put(e)
 		out.WriteRune('\n')
 	}
 	out.Flush()

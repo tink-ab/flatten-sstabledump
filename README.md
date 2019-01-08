@@ -3,8 +3,8 @@ flatten-sstabledump
 `flatten-sstabledump` is a utility that unwraps [Apache
 Cassandra](http://cassandra.apache.org/)'s `sstabledump` JSON array output to
 multiple small JSON objects, one per partition row. Partition metadata is
-inlined into each row.  This utility allows you to easily use map/reduce jobs
-(such as [Apache Hive](https://hive.apache.org), [AWS
+inlined into each row (key: `partition`). This utility allows you to easily use
+map/reduce jobs (such as [Apache Hive](https://hive.apache.org), [AWS
 Athena](https://aws.amazon.com/athena/), [Google
 BigQuery](https://cloud.google.com/bigquery/) etc.) to process sstables.
 
